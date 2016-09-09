@@ -1,0 +1,3 @@
+- name: Push changes
+  command: chdir="{{ workspace_dir }}/{{ item.name }}" git push origin master
+  with_items: "repos.components"

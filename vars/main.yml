@@ -1,0 +1,13 @@
+workspace_dir: "{{ playbook_dir }}/workspace"
+repos:
+    components:
+        -
+            name: description
+            title: Description
+            url: git@github.com:psiphp/description
+        -
+            title: Description Enhancer
+            name: description-doctrine-phpcr-odm
+            url: git@github.com:psiphp/description-doctrine-phpcr-odm
+            parent: description
+

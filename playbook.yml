@@ -1,0 +1,7 @@
+- hosts: local
+  gather_facts: False
+  roles:
+      - { role: dev }
+
+  vars_files:
+      - "vars/main.yml"

@@ -1,0 +1,7 @@
+- name: Clone components
+  git: repo="{{ item.url }}" update=no dest="{{ workspace_dir }}/{{ item.name }}"
+  with_items: "repos.components"
+
+- name: Reset
+  command: git reset --hard origin/master chdir="{{ workspace_dir }}/{{ item.name }}"
+  with_items: "repos.components"

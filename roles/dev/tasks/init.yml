@@ -1,0 +1,2 @@
+- name: Ensure workspace exists
+  file: dest="{{ playbook_dir }}/workspace" state=directory

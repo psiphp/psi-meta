@@ -1,0 +1,15 @@
+- name: README files
+  template: src=README.md dest={{ workspace_dir ~ '/' ~ item.name }}/README.md mode=644
+  with_items: "repos.components"
+
+- name: LICENSE
+  copy: src=LICENSE dest={{ workspace_dir ~ '/' ~ item.name }}/LICENSE mode=644
+  with_items: "repos.components"
+
+- name: gitignore
+  copy: src=gitignore dest={{ workspace_dir ~ '/' ~ item.name }}/.gitignore mode=644
+  with_items: "repos.components"
+
+- name: Travis
+  copy: src=travis.yml dest={{ workspace_dir ~ '/' ~ item.name }}/.travis.yml mode=644 force=no
+  with_items: "repos.components"

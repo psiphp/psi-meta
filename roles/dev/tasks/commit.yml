@@ -1,0 +1,9 @@
+- name: Add changes
+  command: chdir="{{ workspace_dir }}/{{ item.name }}" git add .
+  ignore_errors: yes
+  with_items: "repos.components"
+
+- name: Commit changes
+  command: chdir="{{ workspace_dir }}/{{ item.name }}" git commit -m "Automated update"
+  ignore_errors: yes
+  with_items: "repos.components"
