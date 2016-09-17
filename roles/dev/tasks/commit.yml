@@ -4,6 +4,6 @@
   with_items: "repos.components"
 
 - name: Commit changes
-  command: chdir="{{ workspace_dir }}/{{ item.name }}" git commit -m "Automated update"
+  command: chdir="{{ workspace_dir }}/{{ item.name }}" git commit -m "{{ commit_message }}"
   ignore_errors: yes
   with_items: "repos.components"

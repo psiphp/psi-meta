@@ -1,5 +1,5 @@
 - include: init.yml tags=init
-- include: install.yml tags=dev
+- include: install.yml tags=install
 - include: meta.yml tags=meta
 - include: commit.yml tags=commit
 - include: push.yml tags=push

@@ -1,13 +1,29 @@
 workspace_dir: "{{ playbook_dir }}/workspace"
+commit_message: "Automated update"
 repos:
     components:
         -
             name: description
             title: Description
             url: git@github.com:psiphp/description
+            styleci: 59910930
+            has_packagist: false
         -
-            title: Description Enhancer
+            name: description
+            title: Description
+            url: git@github.com:psiphp/description
+            styleci: 66929406
+            has_packagist: false
+        -
+            title: Description enhancer for PHPCR-ODM
             name: description-doctrine-phpcr-odm
             url: git@github.com:psiphp/description-doctrine-phpcr-odm
             parent: description
-
+            styleci: 67831603
+            has_packagist: false
+        -
+            title: Resource Browser
+            name: resource-browser
+            url: git@github.com:psiphp/resource-browser
+            styleci: 67876015
+            has_packagist: false
