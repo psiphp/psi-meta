@@ -7,9 +7,25 @@
   with_items: "repos.components"
 
 - name: gitignore
-  copy: src=gitignore dest={{ workspace_dir ~ '/' ~ item.name }}/.gitignore mode=644
+  copy: src=gitignore dest={{ workspace_dir ~ '/' ~ item.name }}/.gitignore mode=644 force=no
   with_items: "repos.components"
 
 - name: Travis
-  copy: src=travis.yml dest={{ workspace_dir ~ '/' ~ item.name }}/.travis.yml mode=644 force=no
+  copy: src=travis.yml dest={{ workspace_dir ~ '/' ~ item.name }}/.travis.yml mode=644 force=yes
+  with_items: "repos.components"
+
+- name: Travis hooks directory
+  file: path={{ workspace_dir ~ '/' ~ item.name }}/ci/travis state=directory recurse=true
+  with_items: "repos.components"
+
+- name: Copy hook
+  copy: src=ci/travis/before_install.sh dest={{ workspace_dir ~ '/' ~ item.name }}/ci/travis/before_install.sh force=no mode=755
+  with_items: "repos.components"
+
+- name: Copy hook
+  copy: src=ci/travis/install.sh dest={{ workspace_dir ~ '/' ~ item.name }}/ci/travis/install.sh force=no mode=755
+  with_items: "repos.components"
+
+- name: Copy hook
+  copy: src=ci/travis/script.sh dest={{ workspace_dir ~ '/' ~ item.name }}/ci/travis/script.sh force=no mode=755
   with_items: "repos.components"

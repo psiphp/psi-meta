@@ -6,14 +6,20 @@ repos:
             name: description
             title: Description
             url: git@github.com:psiphp/description
-            styleci: 59910930
-            has_packagist: false
-        -
-            name: description
-            title: Description
-            url: git@github.com:psiphp/description
             styleci: 66929406
-            has_packagist: false
+            has_packagist: true
+        -
+            name: content-type
+            title: Content Type
+            url: git@github.com:psiphp/content-type
+            styleci: 59910930
+            has_packagist: true
+        -
+            name: content-type-bundle
+            title: Content Type Bundle
+            url: git@github.com:psiphp/content-type-bundle
+            styleci: 63088910
+            has_packagist: true
         -
             title: Description enhancer for PHPCR-ODM
             name: description-doctrine-phpcr-odm

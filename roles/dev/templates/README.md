@@ -16,7 +16,8 @@ This component is part of the Psi Content Management Framework
 ## Documentation
 
 You can find out more about this component and others
-[here](https://readthedocs.org/psiphp).
+[here](https://psiphp.readthedocs.io/en/latest/components/{{ item.name
+}}/docs/index.html).
 
 ## Installation
 
@@ -28,5 +29,4 @@ $ composer require 'psiphp/{{ item.name }}'
 
 ## Contributing
 
-Just go ahead and create a PR, you know you need to.
-
+Just go ahead and create a PR, you know you need to..
